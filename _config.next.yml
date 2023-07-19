@@ -51,9 +51,9 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16.ico
-  medium: /images/favicon-32x32.ico
-  apple_touch_icon: /images/logo.jpg
+  small: /sources/images/favicon-16x16.ico
+  medium: /sources/images/favicon-32x32.ico
+  apple_touch_icon: /sources/images/logo.jpg
   #safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 
@@ -141,7 +141,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/logo.jpg
+  url: sources/images/logo.jpg
   # If true, the avatar will be displayed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
@@ -271,7 +271,7 @@ reward_settings:
   animation: false
 
 reward:
-  wechatpay: /images/wechatpay.png
+  wechatpay: /sources/images/wechatpay.png
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
