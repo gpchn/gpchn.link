@@ -677,6 +677,8 @@ comments:
     #gitalk:
     #  order: -2
 
+valine: https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js
+
 valine:
   enable: true
   appId: iHag8HuNcSgkYaYcmQe2YKtF-gzGzoHsz # Your leancloud application appid
