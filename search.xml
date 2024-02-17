@@ -1,31 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Mojo：AI 时代的全新编程语言，能否超越 Python？</title>
+    <url>/2024/02/17/Mojo%EF%BC%9AAI-%E6%97%B6%E4%BB%A3%E7%9A%84%E5%85%A8%E6%96%B0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%8C%E8%83%BD%E5%90%A6%E8%B6%85%E8%B6%8A-Python%EF%BC%9F/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>软件 编程语言 Mojo Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>垃圾佬福音：如何用200元凑出一台电脑</title>
+    <url>/2023/08/28/%E5%9E%83%E5%9C%BE%E4%BD%AC%E7%A6%8F%E9%9F%B3%EF%BC%9A%E5%A6%82%E4%BD%95%E7%94%A8200%E5%85%83%E5%87%91%E5%87%BA%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/</url>
+    <content><![CDATA[<p><em>终于选好了配置、买好了零件、装好了电脑，然后暑假就要结束力（悲）</em></p>
+<h1 id="话不多说先上配置"><a href="#话不多说先上配置" class="headerlink" title="话不多说先上配置"></a>话不多说先上配置</h1><p><img src="/images/2023/08/28/1/1.jpeg" alt="配置单"></p>
+<p><img src="/images/2023/08/28/1/5.png" alt="系统显示"></p>
+<p>不得不说 e3 神教嘎嘎香，160 块钱能有这性能，传送门2、CS:GO、半条命、泰拉瑞亚、求生之路2 这种低配游戏毫无压力（虽然我也没试过，但根据配置要求来看是这样的）</p>
+<p>再加 300 块预算，x79 + e3 &#x2F; e5，再装个显卡，妥妥的游戏机，3A 随便打（心有余而预算不足）</p>
+<p>再苦也不能苦孩子，再省也不能省电源，本来就是纸壳机箱再爆炸就真成火灾力（悲）新电源价格不能低于 1元&#x2F;瓦，二手一定要买大牌子，起码质量有一定保证。买杂牌的搞不好会爆炸（物理）</p>
+<p><em>实际上还从家里的废弃电脑上拆了一块 500G 机械硬盘，没有这块硬盘应该也够用。deepin 吃硬盘吃的有点多，我买的 120G 固态装好以后就只剩 46G 了，当然你可以在安装系统分区的时候把备份分区删掉，这样大约能有 90G 左右（但是 swap 分区一定要留！）</em></p>
+<h2 id="装好系统后"><a href="#装好系统后" class="headerlink" title="装好系统后"></a>装好系统后</h2><p><img src="/images/2023/08/28/1/2.png" alt="系统信息"></p>
+<p><img src="/images/2023/08/28/1/3.png" alt="桌面截图"></p>
+<p>根据朋友 <a href="https://github.com/pihoue/">皮厚鹅</a> 的建议装了 deepin 系统，这次装机没翻车很大程度上要感谢他。</p>
+<h2 id="安兔兔跑分"><a href="#安兔兔跑分" class="headerlink" title="安兔兔跑分"></a>安兔兔跑分</h2><p>从应用商店找到了安兔兔，顺手跑一下</p>
+<p><img src="/images/2023/08/28/1/4.png" alt="跑分截图"></p>
+<p>散热还是买贵了，从开机到跑完分 CPU 温度一直稳定在 27℃，换成萝卜会不会好一些（doge）</p>
+<p>总体来说这个电脑我感觉还不错，性价比高的一批，可能唯一不足的点就在于噪音有点大（以及 Linux 系统有亿点麻烦），把纸箱合上噪音问题能得到很大程度上的解决，但是闷久了机箱内部空气会有点热（用手摸稍有点温的程度，我干脆就又打开了）</p>
+<h1 id="避坑指南"><a href="#避坑指南" class="headerlink" title="避坑指南"></a>避坑指南</h1><h2 id="0-默认分辨率无法调整"><a href="#0-默认分辨率无法调整" class="headerlink" title="0. 默认分辨率无法调整"></a>0. 默认分辨率无法调整</h2><p>刚装好系统时的分辨率是 1024x768，看起来很难受，设置里也只有这一个选项（网上也有其他情况，总之没法调到合适的分辨率）</p>
+<p>针对这一情况我写了一个 shell 脚本来解决：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">cvt 1366 768 60 # 可以换成自己想要的分辨率（如果显示器支持的话），三个数字分别代表 横向分辨率，纵向分辨率 和 帧数</span><br><span class="line">xrandr --newmode &quot;1280x720_60.00&quot;   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync # &#x27;newmode&#x27; 后面不用自己填，在第一行命令的返回中有，直接复制粘贴</span><br><span class="line">xrandr --addmode VGA-1 1280x720_60.00 # 不一定是 VGA-1，运行 &#x27;xrandr -q&#x27; 来确定你应该填什么</span><br><span class="line">xrandr -s 1280x720_60.00</span><br></pre></td></tr></table></figure>
+
+<p>可以把这个脚本写到开机自启动里，我试了几次不管用，每次开机得手动运行</p>
+<p>另外，如果刚进桌面就运行脚本，屏幕上方可能出现一条椭圆形……区域，挡住后面的图像。之后再运行一次脚本就会弹出来一个注销通知（就是那个椭圆形区域的罪魁祸首），点 ‘稍后注销’ 就会自己隐出屏幕，椭圆形区域也会随之消失。</p>
+<h2 id="1-网卡驱动安装"><a href="#1-网卡驱动安装" class="headerlink" title="1. 网卡驱动安装"></a>1. 网卡驱动安装</h2><p>Linux 系统大部分是不支持外置网卡的，也就是说，如果你买的主板不带网卡，就没法连接网络</p>
+<p>我家里刚好有一个闲置的外置网卡（实际上之前是给那个废弃电脑买的），插上去以后无法识别，网卡的灯也没有亮，所以需要安装网卡驱动</p>
+<p>使用 <code>lspci</code> 命令确认外置网卡型号，一般都能在网上搜到驱动，请仔细查看 README 文件（如果有的话），如果安装驱动需要额外安装依赖，可以用手机的 ‘USB 共享网络’ 功能临时供网，不用装驱动，插上就能用（如果共享网络按钮是灰的那就是没插上，检查数据线和 USB 接口）</p>
+<p>如果无法用手机供网，可以用u盘传输 deb 包（或者 rpm 包，看你系统支不支持）</p>
+<p>另外，有时候实在装不上依赖就先安装驱动试试，万一装上了或者作者写的依赖不完全正确呢（我的网卡驱动要求 build-essential 和 git 依赖，我在另一台电脑上 git clone 了用u盘传过去文件夹，没安 build-essential，也能装好，作者可能是想要 gcc 依赖？deepin 自带了 git 和 gcc）</p>
+<h2 id="2-混乱的-Python-环境"><a href="#2-混乱的-Python-环境" class="headerlink" title="2. 混乱的 Python 环境"></a>2. 混乱的 Python 环境</h2><p>deepin 自带 Python2 和 Python3，可我又想装新版本，所以安装了 MiniConda（我终于知道 conda 有多香了）</p>
+<p>国外下载速度太慢，可以从 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">清华镜像</a> 下载 Anaconda 和 MiniConda</p>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>如果这篇文章帮到你的话，可以请我杯咖啡吗（doge）↓</p>
+]]></content>
+      <tags>
+        <tag>硬件 电脑 装机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>白嫖服务器 + .link 顶级域名</title>
-    <url>/2023/07/19/%E7%99%BD%E5%AB%96%E6%9C%8D%E5%8A%A1%E5%99%A8%20+%20.link%20%E9%A1%B6%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
+    <url>/2023/07/19/%E7%99%BD%E5%AB%96%E6%9C%8D%E5%8A%A1%E5%99%A8-link-%E9%A1%B6%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<p><em>观前提示：Vercel 和 GitHub 在国内被墙了，没有梯子就歇菜吧</em></p>
 <h1 id="注册域名"><a href="#注册域名" class="headerlink" title="注册域名"></a>注册域名</h1><p>首先来到白嫖域名的网站：<a href="https://www.dynadot.com/register-your-free-link-domain">https://www.dynadot.com/register-your-free-link-domain</a></p>
-<p><img src="/images/20230719/1/1.png" alt="检查域名可用性"></p>
+<p><img src="/images/2023/07/19/1/1.png" alt="检查域名可用性"></p>
 <p>在搜索框里填上你想要注册的域名，如果可以注册就会是图中的样式，点 Next</p>
 <p>会提示你注册账号，按着提示填就行。实测一个账号只能注册一个免费域名，所以这一步是必须的。</p>
-<p><img src="/images/20230719/1/2.png" alt="注册账号"></p>
+<p><img src="/images/2023/07/19/1/2.png" alt="注册账号"></p>
 <p>这里有一个要注意的地方就是在页面最下方 Create Account 上面有三个勾选框，第一个取消掉，第二第三个勾上。</p>
 <p>填完以后点 Create Account 就行了。</p>
 <p>下一步是验证账号，打开邮箱，它会一次性给你发很多个邮件，找到验证那一封，大概长这样：</p>
-<p><img src="/images/20230719/1/3.png" alt="验证邮件"></p>
+<p><img src="/images/2023/07/19/1/3.png" alt="验证邮件"></p>
 <p>点击验证链接，会跳转到浏览器，然后显示网站的登录页面，我们用刚刚创建的账号登录。</p>
 <p>登录完成后跳转到账号的 dashboard，在页面的右侧会有个设置安全问题，照着提示填就行。</p>
 <p>打开域名管理界面：</p>
-<p><img src="/images/20230719/1/4.png" alt="域名管理"></p>
+<p><img src="/images/2023/07/19/1/4.png" alt="域名管理"></p>
 <p>刚刚注册的链接会显示在这，点进去：</p>
-<p><img src="/images/20230719/1/5.png" alt="点进域名"></p>
+<p><img src="/images/2023/07/19/1/5.png" alt="点进域名"></p>
 <p>往下划，找到 DNS Settings：</p>
-<p><img src="/images/20230719/1/6.png" alt="DNS-Settings"></p>
+<p><img src="/images/2023/07/19/1/6.png" alt="DNS-Settings"></p>
 <p>点进去，在展开的选项中选第一个 Name Servers：</p>
-<p><img src="/images/20230719/1/7.png" alt="Name-Servers"></p>
+<p><img src="/images/2023/07/19/1/7.png" alt="Name-Servers"></p>
 <p>我们先把这个网页搁置，去搞 CloudFlare。</p>
 <h1 id="CloudFlare-设置"><a href="#CloudFlare-设置" class="headerlink" title="CloudFlare 设置"></a>CloudFlare 设置</h1><p>打开 <a href="https://dash.cloudflare.com/">CloudFlare 仪表板</a>（如果你还没有账号，点进去页面上的注册链接，两分钟就注册好了）</p>
-<p><img src="/images/20230719/1/8.png" alt="主页"></p>
+<p><img src="/images/2023/07/19/1/8.png" alt="主页"></p>
 <p>（接下来开始实机演示就进行不下去了，所以没有配图了）</p>
 <p>点击右边的蓝色按钮“添加站点”，跳转到添加站点页面，输入刚刚注册的域名，点击按钮。</p>
 <p>跳转到选择方案界面，往下划选择 Free 方案，点击继续。</p>
@@ -35,11 +79,11 @@
 <h1 id="回到域名注册的网站"><a href="#回到域名注册的网站" class="headerlink" title="回到域名注册的网站"></a>回到域名注册的网站</h1><p>点击继续后会跳转到下一个页面，往下划找到 Name Servers，它们前面有一个 CloudFlare 的图标（橙色的云）</p>
 <p>还记得之前离开域名注册的最后一个步骤吗？选中了 Name Servers 然后搁置，现在将 CloudFlare 提供的两个 Name Servers 填上去，填完后点击保存按钮。</p>
 <p>接下来是一个等待的步骤，一般几分钟就好了。在注册 CloudFlare 的邮箱收到提示后（或者在主页显示这个域名已经可用后），回到 CloudFlare 仪表板的主页（即之前第一次打开仪表板的链接）。回顾一下之前的图片：</p>
-<p><img src="/images/20230719/1/8.png" alt="主页"></p>
+<p><img src="/images/2023/07/19/1/8.png" alt="主页"></p>
 <p>像这样的就是可用了。点进去你的域名，进到 DNS 记录页面：</p>
-<p><img src="/images/20230719/1/9.png" alt="DNS记录"></p>
+<p><img src="/images/2023/07/19/1/9.png" alt="DNS记录"></p>
 <p>这是我已经设置好的样子，你的应该是空的，点击图中右上方的添加记录按钮，你需要添加两个，一个需要在左侧的选项中选则“A”，一个是“CNAME”：</p>
-<p><img src="/images/20230719/1/10.png" alt="A"><br><img src="/images/20230719/1/11.png" alt="CNAME"></p>
+<p><img src="/images/2023/07/19/1/10.png" alt="A"><br><img src="/images/2023/07/19/1/11.png" alt="CNAME"></p>
 <p>这个页面就可以搁置了，接下来进行 GitHub 部分。</p>
 <h1 id="GitHub-设置"><a href="#GitHub-设置" class="headerlink" title="GitHub 设置"></a>GitHub 设置</h1><p>（首先你要有一个 GitHub 账号，如果没有就去注册一个）</p>
 <p>你需要在 GitHub 上新建一个仓库，然后在本地用 git 连接，这将作为你的网站根目录（不用 git 只用 GitHub 网页版理论上也是可行的，如果你实在用不来 git 的话）</p>
@@ -48,25 +92,56 @@
 <p>所有 GitHub 设置到此为止（不考虑后续网站开发），接下来是 vercel 部分。</p>
 <h1 id="Vercel-设置"><a href="#Vercel-设置" class="headerlink" title="Vercel 设置"></a>Vercel 设置</h1><p>进入 <a href="https://vercel.com/dashboard">vercel 的 dashboard 页面</a>（如果你没有 Vercel 账号，用 GitHub 账号注册一个，然后再回来继续）</p>
 <p>点击 Add New，选择 Project：</p>
-<p><img src="/images/20230719/1/12.png" alt="vercel"></p>
+<p><img src="/images/2023/07/19/1/12.png" alt="vercel"></p>
 <p>然后选中刚刚创建的 GitHub 仓库，点击 import：</p>
-<p><img src="/images/20230719/1/13.png" alt="GitHub-repo"></p>
+<p><img src="/images/2023/07/19/1/13.png" alt="GitHub-repo"></p>
 <p>按照提示完成项目的创建，进入到项目页面，点击上方横向菜单最后一个 Settings，然后点击左侧竖向菜单的 Domains：</p>
-<p><img src="/images/20230719/1/14.png" alt="Settings-Domains"></p>
+<p><img src="/images/2023/07/19/1/14.png" alt="Settings-Domains"></p>
 <p>在输入框中输入新注册的域名，点击 Add：</p>
-<p><img src="/images/20230719/1/15.png" alt="Add"></p>
+<p><img src="/images/2023/07/19/1/15.png" alt="Add"></p>
 <p>三个选项自己选择，如果不懂就选第一个。选好以后会跳出来两个配置未确认页面：</p>
-<p><img src="/images/20230719/1/16.png" alt="config-A"><br><img src="/images/20230719/1/17.png" alt="config-CNAME"></p>
+<p><img src="/images/2023/07/19/1/16.png" alt="config-A"><br><img src="/images/2023/07/19/1/17.png" alt="config-CNAME"></p>
 <p>（因为域名是瞎填的，所以会报错）</p>
 <p>接下来进行最后一步，回到 CloudFlare 页面。</p>
 <h1 id="回到-CloudFlare"><a href="#回到-CloudFlare" class="headerlink" title="回到 CloudFlare"></a>回到 CloudFlare</h1><p>回顾一下 CloudFlare 最后的步骤：</p>
-<p><img src="/images/20230719/1/10.png" alt="A"><br><img src="/images/20230719/1/11.png" alt="CNAME"></p>
+<p><img src="/images/2023/07/19/1/10.png" alt="A"><br><img src="/images/2023/07/19/1/11.png" alt="CNAME"></p>
 <p>对照 vercel 的两个未确认配置，填上去，保存，就行了。</p>
 <p>打开你的 .link 域名，如果你在这个地方：</p>
-<p><img src="/images/20230719/1/15.png" alt="Add"></p>
+<p><img src="/images/2023/07/19/1/15.png" alt="Add"></p>
 <p>没有选第三个的话，www.你的域名.link 和 你的域名.link 都是可以打开的，如果选了第三个就只有后者能打开。</p>
 <p>如果不出意外，这时候访问你的网站，就能展示出你 GitHub 仓库（即网站根目录）的内容了。</p>
 <p>注：这个博客网站也是这么创建的，用了 Hexo 作为后端，以及 next 主题。如果你也想这样配置你的网站，自己上网查或者联系我获得帮助都可以，这方面网上资料很多的。</p>
 ]]></content>
+      <tags>
+        <tag>软件 前端 域名</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>苹果2023秋季发布会总结</title>
+    <url>/2023/10/02/%E8%8B%B9%E6%9E%9C2023%E7%A7%8B%E5%AD%A3%E5%8F%91%E5%B8%83%E4%BC%9A%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>耐着性子看完了，今年秋季发布会实际上没有什么新意</p>
+<h1 id="新品"><a href="#新品" class="headerlink" title="新品"></a>新品</h1><p>这次一共发布了 ​6 款新品，它们分别是：</p>
+<ul>
+<li>Apple Watch Series 9</li>
+<li>Apple Watch Ultra 2</li>
+<li>iPhone 15</li>
+<li>iPhone 15 Plus</li>
+<li>iPhone 15 Pro</li>
+<li>iPhone 15 Pro Max<br>一些值得关注的地方：</li>
+<li>Lightning 已经入土，所有新产品都是 Type-C 接口</li>
+<li>iPhone 15 全系都有灵动岛</li>
+<li>iPhone 15 带来了类似 5c 一样的五种配色</li>
+<li>介绍 iPhone 15 游戏性能的时候原神乱入，应该也是整场发布会唯一说过中文的地方</li>
+<li>刺客信条即将登陆 iOS 平台</li>
+<li>静音键造型改变，成为一个普通按钮</li>
+<li>两个新品手表新增了一个双击动作（食指拇指捏两次，可参考 Vision Pro）</li>
+</ul>
+<h1 id="亮点"><a href="#亮点" class="headerlink" title="亮点"></a>亮点</h1><p><strong>环保</strong>作为主题贯穿了整场发布会。苹果已经提前 7 年达成了 2030 年碳中和目标，在介绍每个新品的时候也会特意提到使用了哪些可循环材料，包括机身用的可循环铝、表带使用的可降解纤维、全系电池使用 100% 可循环钴等等。<br>发布会开头放了一个“天气之母”短片，从材料、运输、水电等不同角度表明了苹果对生态环境的注重。</p>
+<h1 id="关于价格"><a href="#关于价格" class="headerlink" title="关于价格"></a>关于价格</h1><p>所有新品的价格我都没有提到 <em>（因为反正我也买不起）</em>，我只能说这很苹果<br>另外，普通用户得等到 9 月下旬才能买到新品了</p>
+<h1 id="​总结"><a href="#​总结" class="headerlink" title="​总结"></a>​总结</h1><p>一句话总结：普通人没什么必要看，也就比春晚好看点。苹果发布会质量真的很高，可能达不到预期，但看了总是有收获的。</p>
+]]></content>
+      <tags>
+        <tag>硬件 手机 发布会</tag>
+      </tags>
   </entry>
 </search>
