@@ -10,7 +10,7 @@ tags: 语言 后端
 
 JSON 是由 Douglas Crockford 根据 JavaScript 的规范发明推广的，被设计为 JavaScript 的子集。最早的 JSON 标准于 2000 年发布，2013 年，ECMA 国际发布了 ECMA-404 标准，正式定义了 JSON 的数据交换格式，详细描述了 JSON 的语法和结构。
 
-**以上内容参考了百度百科，[JSON](https://baike.baidu.com/item/JSON/2462549)**
+*以上内容参考了百度百科，[JSON](https://baike.baidu.com/item/JSON/2462549)*
 
 ### 语法格式
 
@@ -42,7 +42,7 @@ JSON 是一种简洁的数据交换格式，这种设计有利于机器读写，
 
 1996 年 7 月 W3C 在 Jon Bosak（SUN公司的网络技术专家）的建议下成立了 XML 规范制订小组，其目的是为了将标准通用标记语言 SGML（Standard Generic Markup Language）方便地应用于网络，参加规范制订的是一大批著名公司、学术机构代表和 SGML 专家。在他们的共同努力下，XML 1.0 建议书于 1998 年 2 月 10 日正式公布于众。
 
-**以上内容参考了百度百科，[可扩展标记语言](https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/2885849)**
+*以上内容参考了百度百科，[可扩展标记语言](https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/2885849)*
 
 ### 语法格式
 
@@ -77,7 +77,7 @@ XML 是 HTML 的子集，其语法包括标签（tag）、属性（attribute）�
 
 INI 在 Windows 系统中广泛使用，用于存储配置信息。有时候，INI文件也会以不同的扩展名，如 “.CFG”、“.CONF”、或是 “.TXT” 代替。
 
-**以上内容参考了维基百科，[INI文件](https://zh.wikipedia.org/zh-cn/INI%E6%96%87%E4%BB%B6)**
+*以上内容参考了维基百科，[INI文件](https://zh.wikipedia.org/zh-cn/INI%E6%96%87%E4%BB%B6)*
 
 ### 语法格式
 
@@ -110,7 +110,7 @@ YAML 是 "YAML Ain't a Markup Language"（YAML不是一种标记语言）的递�
 
 Clark Evans 在 2001 年首次发表了这种语言，另外 Ingy döt Net 与 Oren Ben-Kiki 也是这语言的共同设计者。YAML 参考了其他多种语言，包括： C 语言、Python、Perl，并从 XML、电子邮件的数据格式（RFC 2822）中获得灵感。
 
-**以上内容参考了百度百科，[YAML](https://baike.baidu.com/item/YAML/1067697)**
+*以上内容参考了百度百科，[YAML](https://baike.baidu.com/item/YAML/1067697)*
 
 ### 语法格式
 
@@ -142,7 +142,7 @@ app:
 
 TOML 是一种旨在成为一个小规模、易于使用的语义化的配置文件格式，它被设计为可以无二义性的转换为一个哈希表。由 Tom Preston-Werner、Pradyun Gedam 等创建
 
-**以上内容参考了维基百科，[TOML](https://zh.wikipedia.org/wiki/TOML) 和 (toml.io)[https://toml.io/cn/v1.0.0]**
+*以上内容参考了维基百科，[TOML](https://zh.wikipedia.org/wiki/TOML) 和 (toml.io)[https://toml.io/cn/v1.0.0]*
 
 ### 语法格式
 
