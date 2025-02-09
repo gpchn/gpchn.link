@@ -50,5 +50,4 @@ type: about
 <br>
 <br>
 ### 所以请你填满它吧！↓
-![微信收款码](images/wechatpay.png)
-<img src="images/wechatpay.png" width=90% alt="微信收款码" />
+![微信收款码](images/wechatpay.png =90%x90%)
