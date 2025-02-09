@@ -160,7 +160,7 @@ doskey less=type
 
 将你看中的主题文件（xxx.omp.json）复制到 GitBash 的目录下面，随便找个地方，例如我放在了 `/etc/oh-my-posh/xxx.nmp.json`
 
-### 在登录自启文件
+### 登录时初始化 oh-my-posh
 
 在 `~/.profile` 中输入以下命令（如果文件不存在就新建一个）：
 
