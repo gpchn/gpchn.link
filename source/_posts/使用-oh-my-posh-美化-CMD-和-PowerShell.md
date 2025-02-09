@@ -107,7 +107,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 ### 安装 clink
 
-大体上和 PowerShell 差不多，只是 CMD 没有什么配置文件，因此我们需要安装 `clink` 来增强 CMD 的功能，在 ![官网](https://chrisant996.github.io/clink/) 右上方下载最新版本。（注：下载用 GitHub Release 托管，需科学上网）
+大体上和 PowerShell 差不多，只是 CMD 没有什么配置文件，因此我们需要安装 `clink` 来增强 CMD 的功能，在 [官网](https://chrisant996.github.io/clink/) 右上方下载最新版本。（注：下载用 GitHub Release 托管，需科学上网）
 
 安装完成后打开一个 CMD 终端，输一些命令试试有没有自动补全功能，有的话就说明安装成功。
 
