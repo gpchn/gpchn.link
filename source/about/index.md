@@ -50,4 +50,6 @@ type: about
 <br>
 <br>
 ### 所以请你填满它吧！↓
-<div style="height=80%">![微信收款码](images/wechatpay.png)</div>
+<div style="height=80%">
+![微信收款码](images/wechatpay.png)
+</div>
