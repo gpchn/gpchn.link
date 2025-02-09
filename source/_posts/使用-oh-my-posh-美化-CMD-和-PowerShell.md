@@ -171,7 +171,7 @@ eval "$(oh-my-posh init bash -c /path/to/xxx.omp.json)"
 
 ## 5. 局限性
 
-需要指出，oh-my-posh 的美化很依赖终端模拟器，例如在 VSCode 中美化会直接失效，目前我找不到方法解决这个问题，应该是 VSCode 自带终端不好使。
+需要指出，oh-my-posh 的美化很依赖终端模拟器，例如在 VSCode 中美化有时会直接失效，目前我找不到方法解决这个问题，应该是 VSCode 自带终端不好使。
 
 ## 6. 总结
 
