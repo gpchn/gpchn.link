@@ -49,8 +49,5 @@ type: about
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 ### 所以请你填满它吧！↓
 ![微信收款码](images/wechatpay.png)
